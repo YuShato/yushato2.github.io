@@ -1,9 +1,9 @@
-import { DEFAULT_SIZE, SIZES } from '../../../sizes/utils/constants';
-import { FullDescriptionProps } from '../../../full-description/types';
-import { CATEGORIES, TAGS } from '../../../categories/utils/constants/categories';
-import { PRODUCT_SOCIAL } from '../../../product-social/utils/constants/product-social';
-import { images } from '../../..//slider/mockData';
+import { FullDescriptionProps } from '../../../text/full-description/types';
+import { images } from '../../../slider/mockData';
 import { FullItemProps } from '../types';
+import { DEFAULT_SIZE, SIZES } from '../../../buttons/sizes/utils/constants';
+import { CATEGORIES, TAGS } from '../../../text/full-description/categories/utils/constants/categories';
+import { PRODUCT_SOCIAL } from '../../../buttons/product-social/utils/constants/product-social';
 
 export const fullDescription: FullDescriptionProps = {
   common:

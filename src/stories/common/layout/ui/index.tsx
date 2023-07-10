@@ -1,4 +1,4 @@
-import { MOBILE_MAP, MOBILE_MAX, TABLET_MAX } from '../../../constants/media-query';
+import { MOBILE_MAP, MOBILE_MAX, TABLET_MAX } from '../../../../constants/media-query';
 import { styled } from 'styled-components';
 
 const LayoutWrapper = styled.div`

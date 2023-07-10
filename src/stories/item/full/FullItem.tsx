@@ -1,17 +1,18 @@
 import React from 'react';
-import { Button } from '../../button/Button';
-import ShopButton from '../../card-button/ShopButton';
-import Rating from '../../rating/Rating';
-import Sizes from '../../sizes/Sizes';
-import { DEFAULT_SIZE, SIZES } from '../../sizes/utils/constants';
-import Categories from '../../categories/Categories';
-import UiCategories from '../../categories/ui';
-import ProductSocialList from '../../product-social/ProductSocial';
-import UiFItem from './ui';
-import TabsCmp, { mockTabsData } from '../../tabs/Tabs';
 import ProductSlider from '../../slider/Slider';
-import UiLayout from '../../layout/ui';
 import { FullItemProps } from './types';
+import UiLayout from '../../common/layout/ui';
+import Rating from '../../buttons/rating/Rating';
+import Sizes from '../../buttons/sizes/Sizes';
+import { DEFAULT_SIZE, SIZES } from '../../buttons/sizes/utils/constants';
+import ShopButton from '../../buttons/card-button/ShopButton';
+
+import UiCategories from '../../text/full-description/categories/ui';
+import Categories from '../../text/full-description/categories/Categories';
+import ProductSocialList from '../../buttons/product-social/ProductSocial';
+import TabsCmp, { mockTabsData } from '../../common/tabs/Tabs';
+import { Button } from '../../buttons/button/Button';
+import UiFItem from './ui';
 
 export const DEF_DESCRIPTION = {
   common: '',

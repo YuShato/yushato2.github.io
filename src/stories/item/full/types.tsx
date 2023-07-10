@@ -1,8 +1,8 @@
-import { SocialItemProps } from '../../product-social/types';
-import { CategoryProps } from '../../categories/types';
-import { FullDescriptionProps } from '../../full-description/types';
-import { SizeItemTypes } from '../../sizes/types';
+import { SizeItemTypes } from '../../buttons/sizes/types';
 import { Image } from '../../slider/types';
+import { CategoryProps } from '../../text/full-description/categories/types';
+import { SocialItemProps } from '../../buttons/product-social/types';
+import { FullDescriptionProps } from '../../text/full-description/types';
 
 export interface FullItemProps {
   data: {

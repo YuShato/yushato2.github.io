@@ -1,9 +1,10 @@
 import React from 'react';
-import { Button } from '../button/Button';
-import UiBuy from './ui';
+
 import PlusIcon from './assets/plus';
 import MinusIcon from './assets/minus';
 import { ShopButtonProps } from './types';
+import { Button } from '../button/Button';
+import UiBuy from './ui';
 
 const ShopButton = ({ itemCount = 0 }: ShopButtonProps) => {
   const onClickShopButton = () => {

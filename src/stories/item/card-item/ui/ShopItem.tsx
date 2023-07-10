@@ -3,7 +3,7 @@ import React from 'react';
 import TrashIcon from './assets/icons/trash';
 import DefaultImage from './assets/default.png';
 
-import ShopButton from '../../card-button/ShopButton';
+import ShopButton from '../../../buttons/card-button/ShopButton';
 import UiShopItem from '../ui/index';
 import { ShopItemProps } from './types';
 
