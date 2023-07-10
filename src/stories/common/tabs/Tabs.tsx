@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Tabs, Tab, Content } from './ui';
-import FullDescription from '../full-description/FullDescription';
-import { fullDescription } from '../item/full/mockData';
+import FullDescription from '../../text/full-description/FullDescription';
+import { fullDescription } from '../../item/full/mockData';
 import { TabData } from './types';
 
 export const mockTabsData: TabData[] = [

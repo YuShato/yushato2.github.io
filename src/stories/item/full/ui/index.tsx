@@ -1,5 +1,6 @@
+import UiBuy from '../../../buttons/card-button/ui';
 import { MOBILE_MAP } from '../../../../constants/media-query';
-import UiBuy from '../../../card-button/ui';
+
 import { styled } from 'styled-components';
 
 const FullItemTitle = styled.h1`

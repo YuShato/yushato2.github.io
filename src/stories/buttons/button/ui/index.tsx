@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes } from 'react';
-import { MOBILE_MAX } from '../../../constants/media-query';
+import { MOBILE_MAX } from '../../../../constants/media-query';
 
 import { css, styled } from 'styled-components';
 
