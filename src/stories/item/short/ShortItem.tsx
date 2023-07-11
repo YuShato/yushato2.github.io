@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '../../buttons/button/Button';
+import { Button } from './../../../components/buttons/button/Button';
 import UiShort from './ui';
 import { ShortItemProps } from './types';
 

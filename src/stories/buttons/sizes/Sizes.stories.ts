@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Sizes from './Sizes';
-import { SIZES } from './utils/constants';
+import Sizes from '../../../components/buttons/sizes/Sizes';
+import { SIZES } from '../../../components/buttons/sizes/utils/constants';
 
 const meta = {
   title: 'Buttons/Sizes',

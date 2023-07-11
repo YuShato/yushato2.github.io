@@ -2,10 +2,9 @@ import React from 'react';
 
 import TrashIcon from './assets/icons/trash';
 import DefaultImage from './assets/default.png';
-
-import ShopButton from '../../../buttons/card-button/ShopButton';
 import UiShopItem from '../ui/index';
 import { ShopItemProps } from './types';
+import ShopButton from '../../../../components/buttons/card-button/ShopButton';
 
 const ShopItem = ({ imgSrc = '', name = '', price = 0, sku = 0, itemCount = 0 }: ShopItemProps) => {
   const total = price * itemCount;

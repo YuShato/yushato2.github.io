@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import ShopButton from './Rating';
+import Rating from '../../../components/buttons/rating/Rating';
 
 const meta = {
   title: 'Buttons/Rating',
-  component: ShopButton,
+  component: Rating,
   tags: ['autodocs'],
-} satisfies Meta<typeof ShopButton>;
+} satisfies Meta<typeof Rating>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

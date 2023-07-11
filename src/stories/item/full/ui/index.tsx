@@ -1,4 +1,4 @@
-import UiBuy from '../../../buttons/card-button/ui';
+import UiBuy from '../../../../components/buttons/card-button/ui';
 import { MOBILE_MAP } from '../../../../constants/media-query';
 
 import { styled } from 'styled-components';

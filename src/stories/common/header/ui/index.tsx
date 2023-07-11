@@ -1,7 +1,7 @@
 import { css, styled } from 'styled-components';
 import { LinkHTMLAttributes } from 'react';
-import UiButton from '../../../buttons/button/ui';
 import { MOBILE_MAP, MOBILE_MAX, TABLET_MAX } from '../../../../constants/media-query';
+import UiButton from '../../../../../src/components/buttons/button/ui';
 
 export interface UiNavListLinkProps extends LinkHTMLAttributes<HTMLAnchorElement> {
   active?: boolean;
