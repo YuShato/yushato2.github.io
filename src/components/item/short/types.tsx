@@ -1,4 +1,4 @@
-import { Image } from '../../slider/types';
+import { Image } from 'stories/slider/types';
 
 export interface ShortItemProps {
   data: {

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import ShopItem from './ShopItem';
+import ShopItem from '../../../components/item/card-item/ShopItem';
 
 const meta = {
   title: 'Item/ShopItem',

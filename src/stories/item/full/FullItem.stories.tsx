@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
-import FullItem from './FullItem';
-import { fullDescription } from './mockData';
-import { images } from '../../slider/mockData';
-import { CATEGORIES, TAGS } from '../../text/full-description/categories/utils/constants/categories';
+import { fullDescription } from '../../../components/item/full/mockData';
+import { images } from '../../../components/slider/mockData';
 import { DEFAULT_SIZE, SIZES } from '../../../components/buttons/sizes/utils/constants';
 import { PRODUCT_SOCIAL } from '../../../components/buttons/product-social/utils/constants/product-social';
+import FullItem from '../../../components/item/full/FullItem';
+import { CATEGORIES, TAGS } from '../../../components/text/categories/utils/constants/categories';
 
 const meta = {
   title: 'Item/FullItem',

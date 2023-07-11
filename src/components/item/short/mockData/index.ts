@@ -1,4 +1,4 @@
-import { images } from '../../../slider/mockData';
+import { images } from '../../../../stories/slider/mockData';
 import { ShortItemProps } from '../types';
 
 export const mockShortProductData: ShortItemProps['data'] = {

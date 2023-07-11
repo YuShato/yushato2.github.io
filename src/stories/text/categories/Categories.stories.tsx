@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Categories from './Categories';
-import { CATEGORIES } from './utils/constants/categories';
+import Categories from '../../../components/text/categories/Categories';
+import { CATEGORIES } from '../../../components/text/categories/utils/constants/categories';
 
 const meta = {
   title: 'Text/Categories',
