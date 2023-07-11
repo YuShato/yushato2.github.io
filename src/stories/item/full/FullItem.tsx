@@ -1,18 +1,17 @@
 import React from 'react';
 import ProductSlider from '../../slider/Slider';
 import { FullItemProps } from './types';
-import UiLayout from '../../common/layout/ui';
 import Rating from '../../../components/buttons/rating/Rating';
 import Sizes from '../../../components/buttons/sizes/Sizes';
 import { DEFAULT_SIZE, SIZES } from '../../../components/buttons/sizes/utils/constants';
 import ShopButton from '../../../components/buttons/card-button/ShopButton';
-
 import UiCategories from '../../text/full-description/categories/ui';
 import Categories from '../../text/full-description/categories/Categories';
 import ProductSocialList from '../../../components/buttons/product-social/ProductSocial';
-import TabsCmp, { mockTabsData } from '../../common/tabs/Tabs';
 import { Button } from '../../../components/buttons/button/Button';
 import UiFItem from './ui';
+import UiLayout from '../../../components/common/layout/ui';
+import TabsCmp, { mockTabsData } from '../../../components/common/tabs/Tabs';
 
 export const DEF_DESCRIPTION = {
   common: '',
