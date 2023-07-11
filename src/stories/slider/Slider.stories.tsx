@@ -1,9 +1,9 @@
-import ProductSlider from './Slider';
+import { images } from '../../components/slider/mockData';
 import type { Meta, StoryObj } from '@storybook/react';
-import { images } from './mockData';
+import ProductSlider from '../../components/slider/Slider';
 
 const meta = {
-  title: 'Example/ProductSlider',
+  title: 'Slider/ProductSlider',
   component: ProductSlider,
   tags: ['autodocs'],
 } satisfies Meta<typeof ProductSlider>;

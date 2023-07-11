@@ -1,9 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
-import Logo from './Logo';
+import Logo from '../../../components/common/logo/Logo';
 
 const meta = {
-  title: 'Example/Logo',
+  title: 'Common/Logo',
   component: Logo,
   tags: ['autodocs'],
   argTypes: {

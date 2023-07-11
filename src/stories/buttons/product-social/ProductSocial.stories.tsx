@@ -1,10 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
-import ProductSocialList from './ProductSocial';
-import { PRODUCT_SOCIAL } from './utils/constants/product-social';
+import ProductSocialList from '../../../components/buttons/product-social/ProductSocial';
+import { PRODUCT_SOCIAL } from '../../../components/buttons/product-social/utils/constants/product-social';
 
 const meta = {
-  title: 'Example/ProductSocial',
+  title: 'Buttons/ProductSocial',
   component: ProductSocialList,
   tags: ['autodocs'],
 } satisfies Meta<typeof ProductSocialList>;

@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import ShortItem from './ShortItem';
-import { images } from '../../slider/mockData';
+import ShortItem from '../../../components/item/short/ShortItem';
+import { images } from '../../../components/slider/mockData';
 
 const meta = {
-  title: 'Example/ShortItem',
+  title: 'Item/ShortItem',
   component: ShortItem,
   tags: ['autodocs'],
 } satisfies Meta<typeof ShortItem>;
