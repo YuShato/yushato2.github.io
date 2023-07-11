@@ -1,7 +1,7 @@
-import React from 'react';
-import UiModal from './ui';
 import CloseIcon from './assets/close';
 import { ModalProps } from './types';
+import React from 'react';
+import UiModal from './ui';
 
 const Modal: React.FC<ModalProps> = ({ visible, children }) => {
   if (!visible) {

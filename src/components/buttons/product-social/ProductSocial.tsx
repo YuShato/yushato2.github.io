@@ -1,9 +1,10 @@
-import React from 'react';
+import UiSocial, { UiButtonProps } from './ui';
+
 import GrayFacebook from './assets/icons/GrayFacebook';
 import GrayLinkedin from './assets/icons/GrayLinkedin';
 import GrayMessage from './assets/icons/GrayMessage';
 import GrayTwitter from './assets/icons/GrayTwitter';
-import UiSocial, { UiButtonProps } from './ui';
+import React from 'react';
 import { SocialListProps } from './types';
 
 const SocialIcon = {

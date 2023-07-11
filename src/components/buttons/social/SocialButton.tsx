@@ -1,8 +1,9 @@
-import React from 'react';
 import UiSocialButton, { UiButtonProps } from './ui';
+
 import FacebookSocialIcon from './assets/facebook';
 import InstagramSocialIcon from './assets/instagram';
 import LinkedinSocialIcon from './assets/linkedin';
+import React from 'react';
 import TwitterSocialIcon from './assets/twitter';
 import YoutubeSocialIcon from './assets/youtube';
 

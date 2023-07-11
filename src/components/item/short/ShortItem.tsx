@@ -1,7 +1,7 @@
-import React from 'react';
 import { Button } from './../../../components/buttons/button/Button';
-import UiShort from './ui';
+import React from 'react';
 import { ShortItemProps } from './types';
+import UiShort from './ui';
 
 const ShortItem = ({ data }: ShortItemProps) => {
   const {

@@ -1,7 +1,7 @@
+import { NavLinkItemProps } from './types';
+import { PATHS } from './utils/constants/paths';
 import React from 'react';
 import UiHeader from './ui';
-import { PATHS } from './utils/constants/paths';
-import { NavLinkItemProps } from './types';
 
 const NavLinkItem = ({ path, active = false }: NavLinkItemProps) => {
   const { name, pathLink, icon: Icon } = path;

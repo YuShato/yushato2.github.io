@@ -1,6 +1,6 @@
+import { CategoriesProps } from './types';
 import React from 'react';
 import UiCategories from './ui';
-import { CategoriesProps } from './types';
 
 const Categories = ({ list, title }: CategoriesProps) => {
   return (

@@ -1,15 +1,10 @@
-import React from 'react';
-
-/* LOGO */
-import LogoSvg from './assets/logo';
-import BigLogoSvg from './assets/big-logo';
-import LogoMobile from './assets/mobile';
-
-/* UI */
+import { LogoProps, LogoType } from './types';
 import { css, styled } from 'styled-components';
 
-/* TYPES */
-import { LogoProps, LogoType } from './types';
+import BigLogoSvg from './assets/big-logo';
+import LogoMobile from './assets/mobile';
+import LogoSvg from './assets/logo';
+import React from 'react';
 
 const UiLogoWrapper = styled.div<{ viewtype: LogoType }>`
   display: flex;

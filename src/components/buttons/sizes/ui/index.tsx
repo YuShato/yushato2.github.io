@@ -1,5 +1,6 @@
-import { ButtonHTMLAttributes } from 'react';
 import { css, styled } from 'styled-components';
+
+import { ButtonHTMLAttributes } from 'react';
 
 export interface UiSizeButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   active: boolean;

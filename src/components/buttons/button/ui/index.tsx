@@ -1,7 +1,7 @@
+import { css, styled } from 'styled-components';
+
 import { ButtonHTMLAttributes } from 'react';
 import { MOBILE_MAX } from '../../../../constants/media-query';
-
-import { css, styled } from 'styled-components';
 
 export interface UiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   backgroundColor?: string;

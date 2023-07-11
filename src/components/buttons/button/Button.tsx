@@ -1,12 +1,12 @@
-import React from 'react';
-import UiButton from './ui';
-import GoogleIcon from './assets/google';
+import { ButtonProps } from './types';
+import CartIcon from './assets/cart';
 import FacebookIcon from './assets/facebook';
+import GoogleIcon from './assets/google';
 import LikeIcon from './assets/like';
 import LoginIcon from './assets/login';
 import LogoutIcon from './assets/logout';
-import CartIcon from './assets/cart';
-import { ButtonProps } from './types';
+import React from 'react';
+import UiButton from './ui';
 
 const ButtonIcons = {
   facebook: FacebookIcon,

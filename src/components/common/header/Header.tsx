@@ -1,9 +1,9 @@
-import React from 'react';
-import UiHeader from './ui';
+import { Button } from './../../../components/buttons/button/Button';
 import { HeaderProps } from './types';
 import Logo from '../logo/Logo';
 import NavList from './NavList';
-import { Button } from './../../../components/buttons/button/Button';
+import React from 'react';
+import UiHeader from './ui';
 
 export const Header = ({ user, onLogin, onLogout }: HeaderProps) => {
   return (

@@ -1,6 +1,7 @@
+import { SizeItemProps, SizesListProps } from './types';
+
 import React from 'react';
 import UiSize from './ui';
-import { SizeItemProps, SizesListProps } from './types';
 
 const SizeItem = ({ size, activeSize = 's' }: SizeItemProps) => {
   const isCurrentSizeActive = size.id === activeSize;

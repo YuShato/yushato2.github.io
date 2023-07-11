@@ -1,5 +1,5 @@
-import { images } from '../../../../stories/slider/mockData';
 import { ShortItemProps } from '../types';
+import { images } from '../../../../components/slider/mockData';
 
 export const mockShortProductData: ShortItemProps['data'] = {
   id: 1,
