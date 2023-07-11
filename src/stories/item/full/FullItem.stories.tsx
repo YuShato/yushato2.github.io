@@ -8,7 +8,7 @@ import { CATEGORIES, TAGS } from '../../text/full-description/categories/utils/c
 import { PRODUCT_SOCIAL } from '../../buttons/product-social/utils/constants/product-social';
 
 const meta = {
-  title: 'Example/FullItem',
+  title: 'Item/FullItem',
   component: FullItem,
   tags: ['autodocs'],
 } satisfies Meta<typeof FullItem>;

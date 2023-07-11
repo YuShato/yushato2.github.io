@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import SocialButton from './SocialButton';
 
 const meta = {
-  title: 'Example/SocialButton',
+  title: 'Buttons/SocialButton',
   component: SocialButton,
   tags: ['autodocs'],
 } satisfies Meta<typeof SocialButton>;

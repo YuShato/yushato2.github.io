@@ -3,7 +3,7 @@ import ShortItem from './ShortItem';
 import { images } from '../../slider/mockData';
 
 const meta = {
-  title: 'Example/ShortItem',
+  title: 'Item/ShortItem',
   component: ShortItem,
   tags: ['autodocs'],
 } satisfies Meta<typeof ShortItem>;

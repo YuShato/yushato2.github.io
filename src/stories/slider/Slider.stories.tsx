@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { images } from './mockData';
 
 const meta = {
-  title: 'Example/ProductSlider',
+  title: 'Slider/ProductSlider',
   component: ProductSlider,
   tags: ['autodocs'],
 } satisfies Meta<typeof ProductSlider>;

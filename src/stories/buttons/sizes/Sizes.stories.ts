@@ -3,7 +3,7 @@ import Sizes from './Sizes';
 import { SIZES } from './utils/constants';
 
 const meta = {
-  title: 'Example/Sizes',
+  title: 'Buttons/Sizes',
   component: Sizes,
   tags: ['autodocs'],
 } as Meta<typeof Sizes>;

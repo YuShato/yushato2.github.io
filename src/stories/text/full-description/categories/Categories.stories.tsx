@@ -3,7 +3,7 @@ import Categories from './Categories';
 import { CATEGORIES } from './utils/constants/categories';
 
 const meta = {
-  title: 'Example/Categories',
+  title: 'Text/Categories',
   component: Categories,
   tags: ['autodocs'],
 } satisfies Meta<typeof Categories>;
