@@ -1,4 +1,4 @@
-import { MOBILE_MAX, TABLET_MAX } from '../../../../constants/media-query';
+import { MOBILE_MAX, TABLET_MAX } from '../../../../../constants/media-query';
 
 import { BaseHTMLAttributes } from 'react';
 import { styled } from 'styled-components';
