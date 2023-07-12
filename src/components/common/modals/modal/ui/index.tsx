@@ -43,6 +43,13 @@ const Window = styled.div`
   font-weight: 700;
   line-height: 16px;
 
+  img {
+    display: flex;
+    margin-inline: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
   @media ${TABLET_MAX} {
     max-width: calc(100% - 100px);
   }

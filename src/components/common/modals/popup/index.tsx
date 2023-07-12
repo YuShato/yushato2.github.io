@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import { Button } from '../../../buttons/button/Button';
+import EmptySvg from './assets/images/empty.svg';
 import ModalPopup from './ModalPopup';
 import UiPopup from './ui';
 
@@ -52,6 +53,8 @@ const Popup = () => {
       <Button label="Open Modal" onClick={openModal} primary type="button" viewtype="default" />
 
       <ModalPopup visible={isOpen} onClose={closeModal}>
+        {!text && <img src={EmptySvg} alt="empty" width={400} height={400} />}
+
         <p>{text}</p>
       </ModalPopup>
     </UiPopup>
