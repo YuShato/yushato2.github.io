@@ -53,7 +53,7 @@ const Popup = () => {
       <Button label="Open Modal" onClick={openModal} primary type="button" viewtype="default" />
 
       <ModalPopup visible={isOpen} onClose={closeModal}>
-        {!text && <img src={EmptySvg} alt="empty" width={400} height={400} />}
+        {Boolean(!text) && <img src={EmptySvg} alt="empty" width={400} height={400} />}
 
         <p>{text}</p>
       </ModalPopup>
