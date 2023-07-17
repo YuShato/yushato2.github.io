@@ -2,6 +2,7 @@ import { NavLinkItemProps } from './types';
 import { PATHS } from './utils/constants/paths';
 import React from 'react';
 import UiHeader from './ui';
+// eslint-disable-next-line import/named
 import { WithTranslation, withTranslation } from 'react-i18next';
 import { t } from 'i18next';
 
