@@ -1,4 +1,4 @@
-import { MOBILE_MAX, TABLET_MAX } from '../../../../constants/media-query';
+import { MOBILE_MAX, TABLET_MAX } from '../../../../../constants/media-query';
 
 import { BaseHTMLAttributes } from 'react';
 import { styled } from 'styled-components';
@@ -42,6 +42,13 @@ const Window = styled.div`
   font-size: 15px;
   font-weight: 700;
   line-height: 16px;
+
+  img {
+    display: flex;
+    margin-inline: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
 
   @media ${TABLET_MAX} {
     max-width: calc(100% - 100px);

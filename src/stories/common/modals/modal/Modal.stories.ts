@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Modal from '../../../components/common/modal/Modal';
+import Modal from '../../../../components/common/modals/modal/Modal';
 
 const meta = {
-  title: 'Common/Modal',
+  title: 'Common/Modals/Modal',
   component: Modal,
   tags: ['autodocs'],
 } satisfies Meta<typeof Modal>;

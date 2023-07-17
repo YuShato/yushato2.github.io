@@ -23,7 +23,9 @@ const Header = styled.header`
   top: 0;
   z-index: 1;
   left: 0;
-  background-color: #fff;
+  background: ${({ theme }) => theme.body};
+  color: ${({ theme }) => theme.text};
+  align-items: center;
 
   @media (max-width: 1200px) {
     max-width: 100%;
@@ -77,8 +79,10 @@ const LogoLink = styled.a`
 const NavList = styled.nav`
   display: flex;
   column-gap: 50px;
-  color: #3d3d3d;
+  color: ${({ theme }) => theme.text};
   font-size: 16px;
+  position: relative;
+  top: 3px;
 
   @media ${TABLET_MAX} {
     font-size: 14px;
@@ -106,7 +110,7 @@ const NavList = styled.nav`
 
 const NavListLink = styled.a<UiNavListLinkProps>`
   text-decoration: none;
-  color: #3d3d3d;
+  color: ${({ theme }) => theme.text};
   text-decoration: none;
   padding-bottom: 3px;
   border-bottom: 3px solid transparent;
@@ -121,7 +125,7 @@ const NavListLink = styled.a<UiNavListLinkProps>`
   ${({ active }) =>
     active &&
     css`
-      color: #3d3d3d;
+      color: ${({ theme }) => theme.text};
       font-weight: 700;
       border-bottom: 3px solid #46a358;
     `}
