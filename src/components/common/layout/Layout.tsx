@@ -2,6 +2,7 @@ import { Header } from '../header/Header';
 import { LayoutProps } from './types';
 import React from 'react';
 import UiLayout from './ui';
+import '../../../localization';
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const onLogin = () => {
