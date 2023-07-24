@@ -25,7 +25,7 @@ const LayoutContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   display: flex;
   flex-direction: column;
   row-gap: 20px;

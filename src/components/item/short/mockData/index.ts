@@ -2,7 +2,6 @@ import { ShortItemProps } from '../types';
 import { images } from '../../../../components/slider/mockData';
 
 export const mockShortProductData: ShortItemProps['data'] = {
-  id: 1,
   title: 'Barberton Daisy',
   newPrice: 199,
   oldPrice: 229,

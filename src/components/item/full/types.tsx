@@ -5,6 +5,7 @@ import { SizeItemTypes } from '../../buttons/sizes/types';
 import { SocialItemProps } from '../../buttons/product-social/types';
 
 export interface FullItemProps {
+  id: number;
   data: {
     name: string;
     price: number;

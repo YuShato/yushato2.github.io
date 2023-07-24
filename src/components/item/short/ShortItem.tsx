@@ -39,7 +39,7 @@ const ShortItem = ({ data }: ShortItemProps) => {
       <UiShort.Prices>
         {Boolean(newPrice) && <UiShort.Price>${newPrice}</UiShort.Price>}
 
-        {Boolean(oldPrice) && <UiShort.OldPrice>${oldPrice}</UiShort.OldPrice>}
+        {Boolean(oldPrice > newPrice) && <UiShort.OldPrice>${oldPrice}</UiShort.OldPrice>}
       </UiShort.Prices>
 
       {description && <UiShort.Description>{description}</UiShort.Description>}
