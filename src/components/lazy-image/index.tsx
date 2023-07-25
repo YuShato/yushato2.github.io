@@ -6,7 +6,6 @@ import SkeletonImage from './skeleton';
 
 const LazyImage: FC<LazyImageProps> = ({ width, height, src, alt, ...rest }) => {
   const supportsLazyLoading = useNativeLazyLoading();
-  console.log('🚀 ~ file: index.tsx:9 ~ supportsLazyLoading:', supportsLazyLoading);
 
   const [ref, inView] = useInView({
     triggerOnce: true,

@@ -9,6 +9,7 @@ export interface HeaderProps {
   onLogin: () => void;
   onLogout: () => void;
   user?: User;
+  toggleTheme: () => void;
 }
 
 export interface NavLinkItemProps extends UiNavListLinkProps {
