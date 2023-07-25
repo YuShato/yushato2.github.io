@@ -2,6 +2,8 @@ import { Button } from './../../../components/buttons/button/Button';
 import React from 'react';
 import { ShortItemProps } from './types';
 import UiShort from './ui';
+import LazyImage from './../../../components/lazy-image';
+import { IsNotEmptyArray } from './../../../utils/helpers/value-tests';
 
 const ShortItem = ({ data }: ShortItemProps) => {
   const {
@@ -20,11 +22,13 @@ const ShortItem = ({ data }: ShortItemProps) => {
     <UiShort>
       <UiShort.Info>
         {Boolean(discount) && <UiShort.Discount>{discount}% OFF</UiShort.Discount>}
-        <UiShort.Img>
-          {/* переделать на слайдер */}
-          <img src={images[0].src} alt="" />
-        </UiShort.Img>
 
+        {IsNotEmptyArray(images) && (
+          <UiShort.Img>
+            {/* переделать на слайдер */}
+            <LazyImage src={images[0].src} alt="" width={250} height={250} />
+          </UiShort.Img>
+        )}
         <UiShort.Prices>
           <Button label="" onClick={onAddToCart} primary={true} size="small" type="button" viewtype="cart" />
 

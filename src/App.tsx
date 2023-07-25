@@ -8,6 +8,10 @@ import './localization';
 import { LocalizationInitiator } from './localization/LocalizationInitiator';
 import { LangSwitcher } from './components/lang-switcher';
 import { useTranslation } from 'react-i18next';
+import ProductList from './components/product-list/ProductList';
+import { mockListData } from './components/product-list/mockData';
+import { ShortItemProps } from './components/item/short/types';
+import { Page } from './components/pages/Page';
 
 function App() {
   const [theme, toggleTheme, componentMounted] = useDarkMode();
@@ -23,12 +27,8 @@ function App() {
       <LocalizationInitiator />
       <>
         <GlobalStyles />
-        <Toggle theme={theme} toggleTheme={toggleTheme} />
-        <h1>Its a {theme === 'light' ? 'light theme' : 'dark theme'}!</h1>
 
-        <h1>Its a {i18n.language}!</h1>
-        <LangSwitcher />
-        <footer></footer>
+        <Page />
       </>
     </ThemeProvider>
   );

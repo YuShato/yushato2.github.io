@@ -13,7 +13,7 @@ const Header = styled.header`
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px;
+  max-width: calc(100vw - 40px);
   border-bottom: 0.3px solid rgba(70, 163, 88, 0.4);
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 33px;
@@ -21,7 +21,7 @@ const Header = styled.header`
   padding-bottom: 10px;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 10;
   left: 0;
   background: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.text};

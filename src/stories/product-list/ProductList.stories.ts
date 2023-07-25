@@ -18,6 +18,12 @@ export const Default: Story = {
       data: {
         ...item.data,
         images: item.data.images || [],
+        onAddToCart: () => {
+          console.log('onAddToCart');
+        },
+        onAddToFavorite: () => {
+          console.log('onAddToFavorite');
+        },
       },
     })),
   },

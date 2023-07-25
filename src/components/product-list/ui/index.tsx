@@ -2,6 +2,7 @@ import { styled } from 'styled-components';
 
 const UiProductList = styled.ul`
   display: flex;
+  width: 100%;
   row-gap: 20px;
   column-gap: 15px;
   flex-wrap: wrap;

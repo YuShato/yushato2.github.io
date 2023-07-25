@@ -8,7 +8,9 @@ const LayoutWrapper = styled.div`
   padding-inline: 40px;
   box-sizing: border-box;
   min-width: 100%;
-  margin-bottom: 60px;
+  padding-bottom: 60px;
+  background: ${({ theme }) => theme.body};
+  color: ${({ theme }) => theme.text};
 
   @media ${TABLET_MAX} {
     padding-inline: 20px;
@@ -25,6 +27,7 @@ const LayoutContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
+  min-height: 90vh;
   max-width: 1300px;
   display: flex;
   flex-direction: column;

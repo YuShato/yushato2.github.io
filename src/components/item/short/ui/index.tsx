@@ -11,6 +11,8 @@ const ShortItem = styled.article`
   padding-bottom: 20px;
   border: 1px solid #e5e5e5;
   border-radius: 8px;
+  background: ${({ theme }) => theme.card};
+  color: ${({ theme }) => theme.text};
 
   a {
     text-decoration: none;
@@ -60,7 +62,7 @@ const OldItemPrice = styled(ShortItemPrice)`
 `;
 
 const ShortItemTitle = styled.h2`
-  color: #3d3d3d;
+  color: ${({ theme }) => theme.text};
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -91,14 +93,15 @@ const ShortItemInfo = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 16px;
-  background: #fbfbfb;
+  background: ${({ theme }) => theme.topCard};
   padding-top: 24px;
   padding-bottom: 24px;
-  border-top: 1px solid transparent;
+  border-top: 3px solid transparent;
   transition: border-top 0.3s;
+  border-radius: 8px 8px 0 0;
 
   &:hover {
-    border-top: 1px solid #46a358;
+    border-top: 3px solid #46a358;
   }
 `;
 

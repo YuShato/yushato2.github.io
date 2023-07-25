@@ -1,6 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import ShortItem from '../../../components/item/short/ShortItem';
 import { images } from '../../../components/slider/mockData';
+const { v4: uuidv4 } = require('uuid');
 
 const meta = {
   title: 'Item/ShortItem',
@@ -13,8 +14,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    id: uuidv4(),
     data: {
-      id: 1,
       title: 'Barberton Daisy',
       newPrice: 199,
       oldPrice: 229,
