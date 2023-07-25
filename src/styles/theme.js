@@ -12,6 +12,6 @@ export const darkTheme = {
   text: '#FAFAFA',
   toggleBorder: '#6B8096',
   gradient: 'linear-gradient(#091236, #1E215D)',
-  card: '#3883b078',
-  topCard: '#588fb096',
+  card: '#072f4678',
+  topCard: '#83a5c2a3',
 };

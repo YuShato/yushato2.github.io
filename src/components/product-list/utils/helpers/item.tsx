@@ -15,31 +15,6 @@ type GeneratedData = {
   };
 };
 
-// const generateRandomText = (length: number): string => {
-//   const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-//   let title = '';
-
-//   while (title.length < length) {
-//     const remainingLength = length - title.length;
-//     const wordLength = Math.min(remainingLength, Math.floor(Math.random() * 15) + 1);
-//     let word = '';
-
-//     for (let i = 0; i < wordLength; i++) {
-//       const randomIndex = Math.floor(Math.random() * characters.length);
-//       word += characters[randomIndex];
-//     }
-
-//     title += word;
-
-//     if (title.length < length) {
-//       const separator = Math.random() < 0.5 ? ' ' : '-';
-//       title += separator;
-//     }
-//   }
-
-//   return title;
-// };
-
 const generateRandomText = (length: number, lang: 'en' | 'ru'): string => {
   let characters: string;
 

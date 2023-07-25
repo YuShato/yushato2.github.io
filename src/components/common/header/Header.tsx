@@ -27,9 +27,11 @@ export const HeaderComponent = ({ toggleTheme, user, onLogin, onLogout }: Header
 
       <NavList />
 
-      <LangSwitcher />
+      <UiHeader.Toggle>
+        <LangSwitcher />
 
-      <Toggle theme={theme} toggleTheme={toggleTheme} />
+        <Toggle theme={theme} toggleTheme={toggleTheme} />
+      </UiHeader.Toggle>
 
       {user ? (
         <>

@@ -83,6 +83,8 @@ const NavList = styled.nav`
   font-size: 16px;
   position: relative;
   top: 3px;
+  width: 100%;
+  margin-left: 50px;
 
   @media ${TABLET_MAX} {
     font-size: 14px;
@@ -161,12 +163,19 @@ const HeaderMobileLogo = styled.div`
   }
 `;
 
+const HederToggle = styled.div`
+  display: flex;
+  column-gap: 10px;
+  margin-right: 20px;
+`;
+
 const UiHeader = Object.assign(Header, {
   Logo: LogoLink,
   Nav: NavList,
   NavItem: NavListLink,
   DesktopLogo: HeaderDesktopLogo,
   MobileLogo: HeaderMobileLogo,
+  Toggle: HederToggle,
 });
 
 export default UiHeader;

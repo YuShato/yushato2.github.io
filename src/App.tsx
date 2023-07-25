@@ -1,24 +1,26 @@
-import React, { useEffect, useMemo } from 'react';
-import { ThemeProvider, useTheme } from 'styled-components';
+import React, { createContext, useMemo } from 'react';
+import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './styles/theme';
 import { GlobalStyles } from './styles/global';
-import Toggle from './components/toggle/Toggle';
 import { useDarkMode } from './hooks/useDarkMode';
-import './localization';
+import { Locale } from './localization';
 import { LocalizationInitiator } from './localization/LocalizationInitiator';
-import { LangSwitcher } from './components/lang-switcher';
 import { useTranslation } from 'react-i18next';
-import ProductList from './components/product-list/ProductList';
-import { mockListData } from './components/product-list/mockData';
-import { ShortItemProps } from './components/item/short/types';
-import { Page } from './components/pages/Page';
 
-export const ThemeContext = React.createContext(null);
+import { Page } from './components/pages/Page';
+import generateRandomData from './components/product-list/utils/helpers/item';
+
+export const ProductsContext = createContext(null);
 
 function App() {
   const [theme, toggleTheme, componentMounted] = useDarkMode();
 
   const { i18n } = useTranslation();
+  const lang = (i18n.language as Locale) === Locale.ru ? Locale.en : Locale.ru;
+
+  const mockListData = useMemo(() => {
+    return generateRandomData(100, lang);
+  }, [lang]);
 
   const currentTheme = useMemo(() => {
     return theme === 'light' ? lightTheme : darkTheme;
@@ -32,7 +34,9 @@ function App() {
       <GlobalStyles />
       <LocalizationInitiator />
 
-      <Page toggleTheme={toggleTheme} />
+      <ProductsContext.Provider value={{ mockListData }}>
+        <Page toggleTheme={toggleTheme} />
+      </ProductsContext.Provider>
     </ThemeProvider>
   );
 }
