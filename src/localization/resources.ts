@@ -13,6 +13,8 @@ export const resources = {
         },
         productList: {
           empty: 'No products found',
+          off: 'OFF',
+          currency: '$',
         },
       },
     },
@@ -28,6 +30,8 @@ export const resources = {
         },
         productList: {
           empty: 'Нет товаров',
+          off: 'СКИДКА',
+          currency: '₽',
         },
       },
     },

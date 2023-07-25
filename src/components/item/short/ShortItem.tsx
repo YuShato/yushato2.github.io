@@ -4,6 +4,7 @@ import { ShortItemProps } from './types';
 import UiShort from './ui';
 import LazyImage from './../../../components/lazy-image';
 import { IsNotEmptyArray } from './../../../utils/helpers/value-tests';
+import { t } from 'i18next';
 
 const ShortItem = ({ data }: ShortItemProps) => {
   const {
@@ -13,7 +14,6 @@ const ShortItem = ({ data }: ShortItemProps) => {
     title = '',
     images = [],
     description,
-    // id,
     onAddToCart,
     onAddToFavorite,
   } = data;
@@ -21,7 +21,11 @@ const ShortItem = ({ data }: ShortItemProps) => {
   return (
     <UiShort>
       <UiShort.Info>
-        {Boolean(discount) && <UiShort.Discount>{discount}% OFF</UiShort.Discount>}
+        {Boolean(discount) && (
+          <UiShort.Discount>
+            {discount}% {t('components.productList.off')}
+          </UiShort.Discount>
+        )}
 
         {IsNotEmptyArray(images) && (
           <UiShort.Img>
@@ -41,9 +45,19 @@ const ShortItem = ({ data }: ShortItemProps) => {
       </a>
 
       <UiShort.Prices>
-        {Boolean(newPrice) && <UiShort.Price>${newPrice}</UiShort.Price>}
+        {Boolean(newPrice) && (
+          <UiShort.Price>
+            {t('components.productList.currency')}
+            {newPrice}
+          </UiShort.Price>
+        )}
 
-        {Boolean(oldPrice > newPrice) && <UiShort.OldPrice>${oldPrice}</UiShort.OldPrice>}
+        {Boolean(oldPrice > newPrice) && (
+          <UiShort.OldPrice>
+            {t('components.productList.currency')}
+            {oldPrice}
+          </UiShort.OldPrice>
+        )}
       </UiShort.Prices>
 
       {description && <UiShort.Description>{description}</UiShort.Description>}

@@ -15,8 +15,40 @@ type GeneratedData = {
   };
 };
 
-const generateRandomText = (length: number): string => {
-  const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+// const generateRandomText = (length: number): string => {
+//   const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+//   let title = '';
+
+//   while (title.length < length) {
+//     const remainingLength = length - title.length;
+//     const wordLength = Math.min(remainingLength, Math.floor(Math.random() * 15) + 1);
+//     let word = '';
+
+//     for (let i = 0; i < wordLength; i++) {
+//       const randomIndex = Math.floor(Math.random() * characters.length);
+//       word += characters[randomIndex];
+//     }
+
+//     title += word;
+
+//     if (title.length < length) {
+//       const separator = Math.random() < 0.5 ? ' ' : '-';
+//       title += separator;
+//     }
+//   }
+
+//   return title;
+// };
+
+const generateRandomText = (length: number, lang: 'en' | 'ru'): string => {
+  let characters: string;
+
+  if (lang === 'en') {
+    characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  } else {
+    characters = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
+  }
+
   let title = '';
 
   while (title.length < length) {
@@ -40,7 +72,7 @@ const generateRandomText = (length: number): string => {
   return title;
 };
 
-const generateRandomData = (count: number): GeneratedData[] => {
+const generateRandomData = (count: number, lang: 'ru' | 'en'): GeneratedData[] => {
   const generatedData: GeneratedData[] = [];
 
   for (let i = 0; i < count; i++) {
@@ -61,8 +93,8 @@ const generateRandomData = (count: number): GeneratedData[] => {
           randomOldPrice > randomNewPrice
             ? Math.floor(((randomOldPrice - randomNewPrice) / randomOldPrice) * 100)
             : null,
-        title: generateRandomText(randomTitleLength),
-        description: generateRandomText(randomDescriptionLength),
+        title: generateRandomText(randomTitleLength, lang),
+        description: generateRandomText(randomDescriptionLength, lang),
         images: getRandomImages(images, imagesLength),
       },
     };

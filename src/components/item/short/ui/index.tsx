@@ -64,6 +64,12 @@ const OldItemPrice = styled(ShortItemPrice)`
 const ShortItemTitle = styled.h2`
   color: ${({ theme }) => theme.text};
   font-size: 16px;
+  line-height: 24px;
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   font-style: normal;
   font-weight: 700;
   line-height: 16px;
@@ -79,9 +85,10 @@ const ShortItemTitle = styled.h2`
 
 const ShortItemDescription = styled.p`
   font-size: 14px;
+  line-height: 20px;
   display: -webkit-box;
   max-width: 100%;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin: 0;
