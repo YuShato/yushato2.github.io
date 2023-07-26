@@ -5,13 +5,13 @@ import Logo from '../logo/Logo';
 import NavList from './NavList';
 import React from 'react';
 import UiHeader from './ui';
-import { useDarkMode } from '../../../hooks/useDarkMode';
 import Toggle from './../../../components/toggle/Toggle';
 import { WithTranslation, withTranslation } from 'react-i18next';
 import { LangSwitcher } from './../../../components/lang-switcher';
+import { useTheme } from 'styled-components';
 
 export const HeaderComponent = ({ toggleTheme, user, onLogin, onLogout }: HeaderProps & WithTranslation) => {
-  const [theme] = useDarkMode();
+  const theme = useTheme();
 
   return (
     <UiHeader>
@@ -30,7 +30,7 @@ export const HeaderComponent = ({ toggleTheme, user, onLogin, onLogout }: Header
       <UiHeader.Toggle>
         <LangSwitcher />
 
-        <Toggle theme={theme} toggleTheme={toggleTheme} />
+        <Toggle theme={theme?.name} toggleTheme={toggleTheme} />
       </UiHeader.Toggle>
 
       {user ? (
