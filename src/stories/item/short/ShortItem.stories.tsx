@@ -15,6 +15,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     id: uuidv4(),
+    currentIndex: 0,
     data: {
       title: 'Barberton Daisy',
       newPrice: 199,

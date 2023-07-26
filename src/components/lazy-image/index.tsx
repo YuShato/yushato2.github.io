@@ -20,7 +20,7 @@ const LazyImage: FC<LazyImageProps> = ({ width, height, src, alt, ...rest }) => 
       data-inview={inView}
       style={{
         position: 'relative',
-        background: '#2a4b7a',
+        background: '#9bc0ba',
         width,
         height,
       }}

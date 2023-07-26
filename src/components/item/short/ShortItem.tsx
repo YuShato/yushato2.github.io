@@ -5,8 +5,10 @@ import UiShort from './ui';
 import LazyImage from './../../../components/lazy-image';
 import { IsNotEmptyArray } from './../../../utils/helpers/value-tests';
 import { t } from 'i18next';
+import { useInView } from 'react-intersection-observer';
+import SkeletonItem from '../card-item/skeleton';
 
-const ShortItem = ({ data }: ShortItemProps) => {
+const ShortItem = ({ currentIndex, data }: ShortItemProps) => {
   const {
     oldPrice = null,
     newPrice = null,
@@ -18,8 +20,14 @@ const ShortItem = ({ data }: ShortItemProps) => {
     onAddToFavorite,
   } = data;
 
-  return (
-    <UiShort>
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+    initialInView: currentIndex < 10 ? true : false,
+  });
+
+  const itemContent = (
+    <>
       <UiShort.Info>
         {Boolean(discount) && (
           <UiShort.Discount>
@@ -61,6 +69,12 @@ const ShortItem = ({ data }: ShortItemProps) => {
       </UiShort.Prices>
 
       {description && <UiShort.Description>{description}</UiShort.Description>}
+    </>
+  );
+
+  return (
+    <UiShort ref={ref} data-inview={inView}>
+      {inView ? itemContent : <SkeletonItem />}
     </UiShort>
   );
 };

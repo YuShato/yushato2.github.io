@@ -29,14 +29,14 @@ export const ProductListComponent: React.FC<ProductListProps> = ({ list }) => {
 
   return (
     <UiProductList>
-      {list.map((item) => {
+      {list.map((item, index) => {
         const itemData = {
           onAddToCart,
           onAddToFavorite,
           ...item.data,
         };
 
-        return <ShortItem key={item.id} data={itemData} id={item.id} />;
+        return <ShortItem key={item.id} data={itemData} id={item.id} currentIndex={index} />;
       })}
     </UiProductList>
   );

@@ -15,6 +15,7 @@ export const Default: Story = {
   args: {
     list: mockListData.map((item) => ({
       id: item.id,
+      currentIndex: 0,
       data: {
         ...item.data,
         images: item.data.images || [],

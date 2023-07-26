@@ -7,6 +7,8 @@ const UiSkeleton = styled.div`
   width: 100%;
   height: inherit;
   background-color: #adbeba;
+  min-width: 250px;
+  min-height: 250px;
 `;
 
 export default UiSkeleton;
