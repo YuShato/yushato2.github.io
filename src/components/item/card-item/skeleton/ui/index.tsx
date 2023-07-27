@@ -23,7 +23,7 @@ const SkeletonItem = styled.div`
   width: 100%;
   height: auto;
   min-height: 300px;
-  max-width: 300px;
+  max-width: 400px;
 `;
 
 const UiSkeleton = Object.assign(SkeletonItem, {

@@ -1,11 +1,11 @@
 import { styled } from 'styled-components';
 
 const UiProductList = styled.ul`
-  display: flex;
   width: 100%;
   row-gap: 20px;
   column-gap: 15px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 `;
 
 const EmptyList = styled.div`

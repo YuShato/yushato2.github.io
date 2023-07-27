@@ -6,7 +6,7 @@ const ShortItem = styled.article`
   flex-direction: column;
   row-gap: 10px;
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding-bottom: 20px;
   border: 1px solid #e5e5e5;
