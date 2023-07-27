@@ -1,8 +1,9 @@
 import { Image } from '../../../components/slider/types';
 
 export interface ShortItemProps {
+  id: string;
+  currentIndex: number;
   data: {
-    id: number;
     oldPrice?: number;
     newPrice?: number;
     discount: number;

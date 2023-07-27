@@ -1,12 +1,19 @@
-import FullItem from '../item/full/FullItem';
 import Layout from '../common/layout/Layout';
-import React from 'react';
-import { mockProductData } from '../item/full/mockData';
+import React, { FC, useContext } from 'react';
+import ProductList from '../product-list/ProductList';
+import { ShortItemProps } from '../item/short/types';
+import { ProductsContext } from '../../App';
 
-export const Page: React.FC = () => {
+interface LayoutProps {
+  toggleTheme: () => void;
+}
+
+export const Page: FC<LayoutProps> = ({ toggleTheme }) => {
+  const mockListData = useContext(ProductsContext);
+
   return (
-    <Layout>
-      <FullItem data={mockProductData} />
+    <Layout toggleTheme={toggleTheme}>
+      <ProductList list={mockListData as ShortItemProps[]} />
     </Layout>
   );
 };

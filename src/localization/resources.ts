@@ -11,6 +11,11 @@ export const resources = {
           plant: 'Plant Care',
           blogs: 'Blogs',
         },
+        productList: {
+          empty: 'No products found',
+          off: 'OFF',
+          currency: '$',
+        },
       },
     },
   },
@@ -22,6 +27,11 @@ export const resources = {
           shop: 'Магазин',
           plant: 'Уход за растениями',
           blogs: 'Блог',
+        },
+        productList: {
+          empty: 'Нет товаров',
+          off: 'СКИДКА',
+          currency: '₽',
         },
       },
     },

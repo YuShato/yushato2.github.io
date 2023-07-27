@@ -42,12 +42,17 @@ const Window = styled.div`
   font-size: 15px;
   font-weight: 700;
   line-height: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   img {
     display: flex;
     margin-inline: auto;
     max-width: 100%;
     max-height: 100%;
+    object-fit: cover;
   }
 
   @media ${TABLET_MAX} {

@@ -11,6 +11,8 @@ const ShortItem = styled.article`
   padding-bottom: 20px;
   border: 1px solid #e5e5e5;
   border-radius: 8px;
+  background: ${({ theme }) => theme.card};
+  color: ${({ theme }) => theme.text};
 
   a {
     text-decoration: none;
@@ -19,6 +21,7 @@ const ShortItem = styled.article`
 `;
 
 const ShortItemImg = styled.div`
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
@@ -60,8 +63,14 @@ const OldItemPrice = styled(ShortItemPrice)`
 `;
 
 const ShortItemTitle = styled.h2`
-  color: #3d3d3d;
+  color: ${({ theme }) => theme.text};
   font-size: 16px;
+  line-height: 24px;
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   font-style: normal;
   font-weight: 700;
   line-height: 16px;
@@ -77,9 +86,10 @@ const ShortItemTitle = styled.h2`
 
 const ShortItemDescription = styled.p`
   font-size: 14px;
+  line-height: 20px;
   display: -webkit-box;
   max-width: 100%;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin: 0;
@@ -91,14 +101,15 @@ const ShortItemInfo = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 16px;
-  background: #fbfbfb;
+  background: ${({ theme }) => theme.topCard};
   padding-top: 24px;
   padding-bottom: 24px;
-  border-top: 1px solid transparent;
+  border-top: 3px solid transparent;
   transition: border-top 0.3s;
+  border-radius: 8px 8px 0 0;
 
   &:hover {
-    border-top: 1px solid #46a358;
+    border-top: 3px solid #46a358;
   }
 `;
 

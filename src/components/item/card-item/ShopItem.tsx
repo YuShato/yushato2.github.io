@@ -4,6 +4,7 @@ import ShopButton from '../../../components/buttons/card-button/ShopButton';
 import { ShopItemProps } from './types';
 import TrashIcon from './assets/icons/trash';
 import UiShopItem from './ui';
+import LazyImage from '../../../components/lazy-image';
 
 const ShopItem = ({ imgSrc = '', name = '', price = 0, sku = 0, itemCount = 0 }: ShopItemProps) => {
   const total = price * itemCount;
@@ -14,7 +15,7 @@ const ShopItem = ({ imgSrc = '', name = '', price = 0, sku = 0, itemCount = 0 }:
 
   return (
     <UiShopItem>
-      <img src={imgSrc ? imgSrc : DefaultImage} alt={name} width={70} height={70} />
+      <LazyImage src={imgSrc ? imgSrc : DefaultImage} alt={name} width={70} height={70} />
 
       <UiShopItem.Info>
         <UiShopItem.Name>{name}</UiShopItem.Name>

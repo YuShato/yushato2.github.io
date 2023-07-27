@@ -10,6 +10,7 @@ export type ThemeSwitcherProps = {
 export const LangSwitcher: FC<ThemeSwitcherProps> = () => {
   const { i18n } = useTranslation();
   const lang = (i18n.language as Locale) === Locale.ru ? Locale.en : Locale.ru;
+
   return (
     <UiLang type="button" onClick={() => i18n.changeLanguage(lang)}>
       {lang}

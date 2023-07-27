@@ -1,35 +1,42 @@
-import React from 'react';
+import React, { createContext, useMemo } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './styles/theme';
 import { GlobalStyles } from './styles/global';
-import Toggle from './components/toggle/Toggle';
 import { useDarkMode } from './hooks/useDarkMode';
-import './localization';
+import { Locale } from './localization';
 import { LocalizationInitiator } from './localization/LocalizationInitiator';
-import { LangSwitcher } from './components/lang-switcher';
 import { useTranslation } from 'react-i18next';
+
+import { Page } from './components/pages/Page';
+import generateRandomData from './components/product-list/utils/helpers/item';
+
+export const ProductsContext = createContext(null);
 
 function App() {
   const [theme, toggleTheme, componentMounted] = useDarkMode();
 
   const { i18n } = useTranslation();
+  const lang = (i18n.language as Locale) === Locale.ru ? Locale.ru : Locale.en;
 
+  const mockListData = useMemo(() => {
+    return generateRandomData(100, lang);
+  }, [lang]);
+
+  const currentTheme = useMemo(() => {
+    return theme === 'light' ? lightTheme : darkTheme;
+  }, [theme]);
   if (!componentMounted) {
     return <div />;
   }
 
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+    <ThemeProvider theme={currentTheme}>
+      <GlobalStyles />
       <LocalizationInitiator />
-      <>
-        <GlobalStyles />
-        <Toggle theme={theme} toggleTheme={toggleTheme} />
-        <h1>Its a {theme === 'light' ? 'light theme' : 'dark theme'}!</h1>
 
-        <h1>Its a {i18n.language}!</h1>
-        <LangSwitcher />
-        <footer></footer>
-      </>
+      <ProductsContext.Provider value={mockListData}>
+        <Page toggleTheme={toggleTheme} />
+      </ProductsContext.Provider>
     </ThemeProvider>
   );
 }
