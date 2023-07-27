@@ -1,5 +1,5 @@
 import { Button } from './../../../components/buttons/button/Button';
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { ShortItemProps } from './types';
 import UiShort from './ui';
 import LazyImage from './../../../components/lazy-image';
@@ -7,6 +7,7 @@ import { IsNotEmptyArray } from './../../../utils/helpers/value-tests';
 import { t } from 'i18next';
 import { useInView } from 'react-intersection-observer';
 import SkeletonItem from '../card-item/skeleton';
+import Modal from './../../../components/modal';
 
 const ShortItem = ({ currentIndex, data }: ShortItemProps) => {
   const {
@@ -26,6 +27,12 @@ const ShortItem = ({ currentIndex, data }: ShortItemProps) => {
     initialInView: currentIndex < 10 ? true : false,
   });
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = useCallback(() => {
+    setIsModalOpen(!isModalOpen);
+  }, [isModalOpen]);
+
   const itemContent = (
     <>
       <UiShort.Info>
@@ -36,9 +43,15 @@ const ShortItem = ({ currentIndex, data }: ShortItemProps) => {
         )}
 
         {IsNotEmptyArray(images) && (
-          <UiShort.Img>
+          <UiShort.Img onClick={toggleModal}>
             {/* переделать на слайдер */}
-            <LazyImage src={images[0].src} alt="" width={250} height={250} />
+            <LazyImage src={images[0].src} alt={title} width={250} height={250} />
+
+            {isModalOpen && (
+              <Modal onClose={toggleModal} isOpen={isModalOpen}>
+                <LazyImage src={images[0].src} alt={title} width={350} height={350} />
+              </Modal>
+            )}
           </UiShort.Img>
         )}
         <UiShort.Prices>

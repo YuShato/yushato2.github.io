@@ -4,7 +4,7 @@ const SkeletonRow = styled.div`
   display: flex;
   width: 100%;
   height: 40px;
-  background-color: #adbeba;
+  background-color: #b4bebc;
 `;
 
 const SkeletonImg = styled.div`

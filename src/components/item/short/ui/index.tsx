@@ -21,6 +21,7 @@ const ShortItem = styled.article`
 `;
 
 const ShortItemImg = styled.div`
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;

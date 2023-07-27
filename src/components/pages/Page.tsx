@@ -9,7 +9,7 @@ interface LayoutProps {
 }
 
 export const Page: FC<LayoutProps> = ({ toggleTheme }) => {
-  const { mockListData } = useContext(ProductsContext);
+  const mockListData = useContext(ProductsContext);
 
   return (
     <Layout toggleTheme={toggleTheme}>

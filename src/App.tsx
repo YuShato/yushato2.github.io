@@ -16,7 +16,7 @@ function App() {
   const [theme, toggleTheme, componentMounted] = useDarkMode();
 
   const { i18n } = useTranslation();
-  const lang = (i18n.language as Locale) === Locale.ru ? Locale.en : Locale.ru;
+  const lang = (i18n.language as Locale) === Locale.ru ? Locale.ru : Locale.en;
 
   const mockListData = useMemo(() => {
     return generateRandomData(100, lang);
@@ -34,7 +34,7 @@ function App() {
       <GlobalStyles />
       <LocalizationInitiator />
 
-      <ProductsContext.Provider value={{ mockListData }}>
+      <ProductsContext.Provider value={mockListData}>
         <Page toggleTheme={toggleTheme} />
       </ProductsContext.Provider>
     </ThemeProvider>
