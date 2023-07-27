@@ -1,3 +1,3 @@
 import generateRandomData from '../utils/helpers/item';
 
-export const mockListData = generateRandomData(10, 'ru');
+export const mockListData = generateRandomData(200, 'ru');

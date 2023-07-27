@@ -29,6 +29,16 @@ const Header = styled.header`
 
   @media (max-width: 1200px) {
     max-width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding-bottom: 0;
+    row-gap: 10px;
+
+    ${UiButton} {
+      @media (max-width: 1200px) {
+        grid-row: 1;
+      }
+    }
   }
 
   @media ${TABLET_MAX} {
@@ -71,7 +81,7 @@ const LogoLink = styled.a`
     }
   }
 
-  @media ${MOBILE_MAP} {
+  @media (max-width: 1200px) {
     grid-row: 1;
   }
 `;
@@ -84,7 +94,14 @@ const NavList = styled.nav`
   position: relative;
   top: 3px;
   width: 100%;
+  max-width: calc(100vw - 40px);
   margin-left: 50px;
+
+  @media (max-width: 1200px) {
+    grid-row: 2;
+    grid-column: 1/4;
+    justify-content: center;
+  }
 
   @media ${TABLET_MAX} {
     font-size: 14px;
@@ -105,7 +122,7 @@ const NavList = styled.nav`
   }
 
   @media ${MOBILE_MAX} {
-    column-gap: 50px;
+    column-gap: 30px;
     order: 0;
   }
 `;
@@ -140,6 +157,12 @@ const NavListLink = styled.a<UiNavListLinkProps>`
     }
   }
 
+  @media ${TABLET_MAX} {
+    span {
+      text-align: center;
+    }
+  }
+
   @media ${MOBILE_MAX} {
     border: none;
 
@@ -167,6 +190,10 @@ const HederToggle = styled.div`
   display: flex;
   column-gap: 10px;
   margin-right: 20px;
+
+  @media (max-width: 1200px) {
+    grid-row: 1;
+  }
 `;
 
 const UiHeader = Object.assign(Header, {
