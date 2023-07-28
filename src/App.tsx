@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 
 import { Page } from './components/pages/Page';
 import generateRandomData from './components/product-list/utils/helpers/item';
+import { ProfileForm } from './components/forms/profile-form';
 
 export const ProductsContext = createContext(null);
 
@@ -36,6 +37,8 @@ function App() {
 
       <ProductsContext.Provider value={mockListData}>
         <Page toggleTheme={toggleTheme} />
+
+        <ProfileForm />
       </ProductsContext.Provider>
     </ThemeProvider>
   );
