@@ -15,7 +15,7 @@ const ShopItem = ({ imgSrc = '', name = '', price = 0, sku = 0, itemCount = 0 }:
 
   return (
     <UiShopItem>
-      <LazyImage src={imgSrc ? imgSrc : DefaultImage} alt={name} width={70} height={70} />
+      <LazyImage src={imgSrc} alt={name} width={70} height={70} />
 
       <UiShopItem.Info>
         <UiShopItem.Name>{name}</UiShopItem.Name>

@@ -134,11 +134,11 @@ const NavListLink = styled.a<UiNavListLinkProps>`
   padding-bottom: 3px;
   border-bottom: 3px solid transparent;
   text-transform: uppercase;
+  font-weight: 700;
 
   &:hover,
   &:focus {
     color: #46a358;
-    font-weight: 700;
   }
 
   ${({ active }) =>

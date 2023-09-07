@@ -48,7 +48,7 @@ const Popup = () => {
 
   return (
     <UiPopup>
-      <UiPopup.Input ref={inputRef} type="search" onChange={changeTextValue} />
+      <UiPopup.Input ref={inputRef} type="search" onChange={changeTextValue} placeholder="Enter text" />
 
       <Button label="Open Modal" onClick={openModal} primary type="button" viewtype="default" />
 
