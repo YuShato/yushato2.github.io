@@ -7,7 +7,7 @@ import { Locale } from './localization';
 import { LocalizationInitiator } from './localization/LocalizationInitiator';
 import { useTranslation } from 'react-i18next';
 import generateRandomData from './components/product-list/utils/helpers/item';
-import AppRoutes from './routind';
+import AppRoutes from './routing';
 
 export const ProductsContext = createContext(null);
 
