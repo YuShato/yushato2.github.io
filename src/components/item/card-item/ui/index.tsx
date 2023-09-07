@@ -14,6 +14,7 @@ const ShopItemWrapper = styled.div`
   align-items: center;
   align-content: center;
   justify-content: center;
+  margin-bottom: 10px;
 
   p {
     padding: 0;

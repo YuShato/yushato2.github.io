@@ -4,15 +4,11 @@ import ProductList from '../product-list/ProductList';
 import { ShortItemProps } from '../item/short/types';
 import { ProductsContext } from '../../App';
 
-interface LayoutProps {
-  toggleTheme: () => void;
-}
-
-export const Page: FC<LayoutProps> = ({ toggleTheme }) => {
+export const Page: FC = () => {
   const mockListData = useContext(ProductsContext);
 
   return (
-    <Layout toggleTheme={toggleTheme}>
+    <Layout>
       <ProductList list={mockListData as ShortItemProps[]} />
     </Layout>
   );

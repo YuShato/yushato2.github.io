@@ -6,11 +6,14 @@ import { useDarkMode } from './hooks/useDarkMode';
 import { Locale } from './localization';
 import { LocalizationInitiator } from './localization/LocalizationInitiator';
 import { useTranslation } from 'react-i18next';
-
-import { Page } from './components/pages/Page';
 import generateRandomData from './components/product-list/utils/helpers/item';
+import AppRoutes from './routind';
 
 export const ProductsContext = createContext(null);
+
+export const LangContext = createContext(null);
+
+export const ToggleThemeContext = createContext(null);
 
 function App() {
   const [theme, toggleTheme, componentMounted] = useDarkMode();
@@ -25,18 +28,24 @@ function App() {
   const currentTheme = useMemo(() => {
     return theme === 'light' ? lightTheme : darkTheme;
   }, [theme]);
+
   if (!componentMounted) {
     return <div />;
   }
 
   return (
     <ThemeProvider theme={currentTheme}>
-      <GlobalStyles />
-      <LocalizationInitiator />
+      <LangContext.Provider value={lang}>
+        <ToggleThemeContext.Provider value={toggleTheme}>
+          <ProductsContext.Provider value={mockListData}>
+            <GlobalStyles />
 
-      <ProductsContext.Provider value={mockListData}>
-        <Page toggleTheme={toggleTheme} />
-      </ProductsContext.Provider>
+            <LocalizationInitiator />
+
+            <AppRoutes />
+          </ProductsContext.Provider>
+        </ToggleThemeContext.Provider>
+      </LangContext.Provider>
     </ThemeProvider>
   );
 }

@@ -8,8 +8,9 @@ export const resources = {
         header: {
           root: 'Home',
           shop: 'Shop',
-          plant: 'Plant Care',
-          blogs: 'Blogs',
+          profile: 'Profile',
+          cart: 'Cart',
+          modal: 'Modal',
         },
         productList: {
           empty: 'No products found',
@@ -25,8 +26,9 @@ export const resources = {
         header: {
           root: 'Главная',
           shop: 'Магазин',
-          plant: 'Уход за растениями',
-          blogs: 'Блог',
+          profile: 'Профиль',
+          cart: 'Корзина',
+          modal: 'Модальное окно',
         },
         productList: {
           empty: 'Нет товаров',

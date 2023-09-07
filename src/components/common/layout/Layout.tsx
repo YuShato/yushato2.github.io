@@ -1,10 +1,12 @@
 import { Header } from '../header/Header';
 import { LayoutProps } from './types';
-import React from 'react';
+import React, { useContext } from 'react';
 import UiLayout from './ui';
 import '../../../localization';
+import { ToggleThemeContext } from '../../../App';
 
-const Layout: React.FC<LayoutProps> = ({ toggleTheme, children }) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const toggleTheme = useContext(ToggleThemeContext);
   const onLogin = () => {
     console.log('Login');
   };
