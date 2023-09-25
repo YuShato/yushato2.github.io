@@ -28,25 +28,26 @@ jobs:
         run: npm install
 
       # Запускаем тесты и линтер
-      - name: Run tests and linter
+      - name: "Run tests and linter"
         run: npm run lint && npm test
 
      # Собираем приложение
-     - name: Build Application
-       run: npm run build
+      - name: "Build Application"
+        run: npm run build
 
      # Публикуем приложение на Github Pages
-     - name: Deploy to Github Pages
-       uses: JamesIves/github-pages-deploy-action@4.2.1
-       with:
-         branch: gh-pages
-         folder: dist
+      - name: Deploy to Github Pages
+        uses: JamesIves/github-pages-deploy-action@4.2.1
+        with:
+          branch: gh-pages
+          folder: dist
 
-      # # Собираем Storybook
+
+      # Собираем Storybook
       # - name: Build Storybook
       #   run: npm run build-storybook
 
-      # # Публикуем Storybook на Github Pages
+      # Публикуем Storybook на Github Pages
       # - name: Deploy Storybook to Github Pages
       #   uses: JamesIves/github-pages-deploy-action@4.2.1
       #   with:
@@ -58,3 +59,4 @@ jobs:
       - name: Fail on failed tests
         run: |
           if [ ${{ job.status }} == 'failure' ]; then exit 1; fi;
+      
